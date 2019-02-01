@@ -16,5 +16,19 @@ pipeline {
         }
       }
     }
+    stage('11') {
+      parallel {
+        stage('11') {
+          steps {
+            sh 'hostname -a'
+          }
+        }
+        stage('22') {
+          steps {
+            echo '222'
+          }
+        }
+      }
+    }
   }
 }
