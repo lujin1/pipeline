@@ -17,11 +17,11 @@ pipeline {
         echo '1111'
       }
     }
-    stage('Deployment-1') {
+    stage('Deployment') {
       parallel {
         stage('Deployment-1') {
           steps {
-            sh 'hostname -a'
+            echo 'Deployment-1'
           }
         }
         stage('Deployment-2') {
@@ -51,7 +51,7 @@ pipeline {
         echo 'Rollback'
       }
     }
-    stage('Map Route-1') {
+    stage('Map Route') {
       parallel {
         stage('Map Route1') {
           steps {
@@ -68,6 +68,26 @@ pipeline {
             echo 'Map Route-3'
           }
         }
+      }
+    }
+    stage('Unmap Route') {
+      steps {
+        echo 'Unmap Route'
+      }
+    }
+    stage('Stop Old APP') {
+      steps {
+        echo 'Stop Old APP'
+      }
+    }
+    stage('Delete Old APP') {
+      steps {
+        echo 'Delete Old APP'
+      }
+    }
+    stage('Smoke Test') {
+      steps {
+        echo 'Smoke Test'
       }
     }
   }
