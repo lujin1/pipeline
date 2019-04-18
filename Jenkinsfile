@@ -4,7 +4,7 @@ pipeline {
       label 'jenkins-node'
       containerTemplate {
         name 'jenkins-node'
-        image 'wpacr.azurecr.io/jenkins-alpinenode:v3'
+        image 'advimages.azurecr.io/jenkins-alpinenode:v4'
         ttyEnabled true
       }
 
