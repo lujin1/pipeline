@@ -92,7 +92,7 @@ pipeline {
     }
     stage('1') {
       steps {
-        anchore(name: 'an', anchoreioUser: 'admin', anchoreioPass: 'anchore-admin')
+        anchore(name: 'an', bailOnPluginFail: true, engineCredentialsId: 'qweqweqwe')
       }
     }
   }
