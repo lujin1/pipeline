@@ -90,5 +90,10 @@ pipeline {
         echo 'Smoke Test'
       }
     }
+    stage('1') {
+      steps {
+        anchore(name: 'an', anchoreioUser: 'admin', anchoreioPass: 'anchore-admin')
+      }
+    }
   }
 }
