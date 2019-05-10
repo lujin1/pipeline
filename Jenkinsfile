@@ -4,7 +4,7 @@ pipeline {
       label 'jenkins-node'
       containerTemplate {
         name 'jenkins-node'
-        image 'gcr.io/gcp-runtimes/ubuntu_16_0_4:laster'
+        image 'gcr.io/gcp-runtimes/ubuntu_16_0_4:latest'
         ttyEnabled true
       }
 
