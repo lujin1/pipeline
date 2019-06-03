@@ -22,6 +22,7 @@ pipeline {
         stage('Deployment-1') {
           steps {
             echo 'Deployment-1'
+            readYaml(file: 't.txt', text: '1.txt')
           }
         }
         stage('Deployment-2') {
